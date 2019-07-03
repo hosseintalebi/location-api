@@ -49,7 +49,7 @@ app.get('/countries', (req, res) => {
 })
 
 app.post('/regions', (req, res) => {
-    const regions = _.map(req.body, (_region) => {
+    const regions = _.map(req.body.regions, (_region) => {
          const region = new Region({
             region: _region.region,
             country: _region.country
