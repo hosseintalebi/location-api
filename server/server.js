@@ -26,6 +26,7 @@ app.use(function (req, res, next) {
 });
 
 app.post('/countries', (req, res) => {
+    console.log(req.body)
     const country = new Country({
         name: req.body.name,
         code: req.body.code,
